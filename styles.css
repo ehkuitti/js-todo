@@ -1,0 +1,126 @@
+/*Koskee kaikkia*/
+
+* {
+    text-align: center;
+    font-family: "omnes-pro", sans-serif;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/*Luokat*/
+
+#tehtavaDiv {
+    display: inline-flex;
+}
+
+.li_tekstialkio {
+    width: 50%;
+}
+
+.li_nappialkio {
+    width: 50%;
+}
+
+/*ID:t*/
+
+#taskListContainer {
+    border-radius: 25px;
+    background-color: white;
+    width: 395px;
+    border: 10px solid black;
+    padding: -10px 50px -10px 50px;
+    margin: 50px 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/*Elementit*/
+
+body {
+    background-color:#019dd5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button {
+    padding: 0,5rem;
+    font-size: 1.6rem;
+    border: none;
+    background: white;
+    font-weight: bold;
+}
+
+form button {
+    cursor: pointer;
+}
+
+h1 {
+    color: white; 
+    font-size: 4em;
+    text-shadow: 2px 2px 2px black;
+}
+
+h3 {
+    display: inline;
+}
+
+input {
+    display: inline;
+}
+
+ul li {
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+}
+
+label {
+    display: inline;
+}
+
+form {
+    display: inline;
+}
+
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+
+/*Fontti-importit*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=xal0jok&ht=tk&f=7986.7987.7988.7996&a=13515390&app=typekit&e=css");
+
+@font-face {
+font-family:"omnes-pro";
+src:url("https://use.typekit.net/af/6e84fe/00000000000000003b9b1e46/27/l?primer=8c6cdece1802ac03951c30593622b1b6185a07621a4f8858e37fe29080c384e2&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/6e84fe/00000000000000003b9b1e46/27/d?primer=8c6cdece1802ac03951c30593622b1b6185a07621a4f8858e37fe29080c384e2&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/6e84fe/00000000000000003b9b1e46/27/a?primer=8c6cdece1802ac03951c30593622b1b6185a07621a4f8858e37fe29080c384e2&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;
+}
+
+@font-face {
+font-family:"omnes-pro";
+src:url("https://use.typekit.net/af/bdcc6e/00000000000000003b9b1e45/27/l?primer=8c6cdece1802ac03951c30593622b1b6185a07621a4f8858e37fe29080c384e2&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/bdcc6e/00000000000000003b9b1e45/27/d?primer=8c6cdece1802ac03951c30593622b1b6185a07621a4f8858e37fe29080c384e2&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/bdcc6e/00000000000000003b9b1e45/27/a?primer=8c6cdece1802ac03951c30593622b1b6185a07621a4f8858e37fe29080c384e2&fvd=i4&v=3") format("opentype");
+font-display:auto;font-style:italic;font-weight:400;
+}
+
+@font-face {
+font-family:"omnes-pro";
+src:url("https://use.typekit.net/af/491a7f/00000000000000003b9b1e4c/27/l?primer=8c6cdece1802ac03951c30593622b1b6185a07621a4f8858e37fe29080c384e2&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/491a7f/00000000000000003b9b1e4c/27/d?primer=8c6cdece1802ac03951c30593622b1b6185a07621a4f8858e37fe29080c384e2&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/491a7f/00000000000000003b9b1e4c/27/a?primer=8c6cdece1802ac03951c30593622b1b6185a07621a4f8858e37fe29080c384e2&fvd=n7&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;
+}
+
+@font-face {
+font-family:"omnes-pro";
+src:url("https://use.typekit.net/af/d71088/00000000000000003b9b1e47/27/l?primer=8c6cdece1802ac03951c30593622b1b6185a07621a4f8858e37fe29080c384e2&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/d71088/00000000000000003b9b1e47/27/d?primer=8c6cdece1802ac03951c30593622b1b6185a07621a4f8858e37fe29080c384e2&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/d71088/00000000000000003b9b1e47/27/a?primer=8c6cdece1802ac03951c30593622b1b6185a07621a4f8858e37fe29080c384e2&fvd=n5&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:500;
+}
+
+.tk-omnes-pro { font-family: "omnes-pro",sans-serif; }
