@@ -1,4 +1,6 @@
-# A JS Todo app for storing tasks. Created using HTML, CSS, and JavaScript.
+# JS Todo app 
+
+JS todo app for storing tasks. Created using HTML, CSS, and JavaScript.
 
 <img width="506" height="534" alt="kuva" src="https://github.com/user-attachments/assets/825f52c3-44e5-4548-a7a1-4ca19a8721d6" />
 
