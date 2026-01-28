@@ -1,56 +1,61 @@
-function loadTasks() {
-  let tasks = Array.from(JSON.parse(localStorage))
-}
-
-function addChild (event, todos) {
-
-  //Estää selaimen autorefreshin
-  event.preventDefault();
-
-  let inputValue = document.getElementById("input").value; 
-
-  if (inputValue === "") {
-    alert("Please enter a task before adding."); // Or use a more user-friendly message
-    return; // Stop execution if empty
-  }
-
-  let listItem = document.createElement("li");
-
-  
-  let liItemValue = document.createTextNode(inputValue);
-
-  // Adds the the desired text to the list item
-  listItem.appendChild(liItemValue);
-  
-  listItem.classList.add("item");
-
-  //Pidennetään valmista listaa yksittäisellä lista-alkiolla
-  document.getElementById("taskList").appendChild(listItem);
-
-  todoList.push(listItem)
-
-  localStorage.getItem("todoList").setItem(liItemValue, listItem);
-
-  inputValue = '';
-
-}
+const input = document.querySelector('input');
+const addButton = document.querySelector('button');
+const taskList = document.getElementById('taskList');
 
 let todoList = [];
 
-localStorage.setItem("todoList", todoList);
-
-//Obtain button value
-let addButton = document.querySelector('button');
-let input = document.querySelector('input');
-
-addButton.addEventListener("click", addChild)
-
-let todoDiv = document.createElement('div');
-todoDiv.classList.add("todo");
-
-input.addEventListener('keydown', (event) => {
-  if (event.key === "Enter") {
-    console.log(event);
-    addChild(event, todoList);
+// Load tasks from localStorage on page load
+function loadTasks() {
+  const saved = localStorage.getItem('todoList');
+  if (saved) {
+    todoList = JSON.parse(saved);
+    todoList.forEach(task => addTaskToDOM(task));
   }
-})
+}
+
+// Add new task
+function addTask(event) {
+  event.preventDefault();
+
+  const inputValue = input.value.trim();
+
+  if (inputValue === '') {
+    alert('Please enter a task before adding.');
+    return;
+  }
+
+  const task = {
+    id: Date.now(),
+    text: inputValue
+  };
+
+  addTaskToDOM(task);
+  todoList.push(task);
+  saveTasks();
+
+  input.value = '';
+}
+
+// Add task to DOM
+function addTaskToDOM(task) {
+  const listItem = document.createElement('li');
+  listItem.textContent = task.text;
+  listItem.classList.add('item');
+  taskList.appendChild(listItem);
+}
+
+// Save tasks to localStorage
+function saveTasks() {
+  localStorage.setItem('todoList', JSON.stringify(todoList));
+}
+
+// Event listeners
+addButton.addEventListener('click', addTask);
+input.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    addTask(event);
+  }
+});
+
+// Load tasks when page loads
+loadTasks();
